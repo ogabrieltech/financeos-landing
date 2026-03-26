@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FinanceOS — Controle Financeiro Inteligente | ogabrieltech</title>
-<meta name="description" content="Controle suas finanças de forma simples e visual. Sem mensalidade, sem complicação. Pagamento único de R$37.">
+<meta name="description" content="Controle suas finanças de forma simples e visual. Planos a partir de R$9,90/mês. Pague só o que usar, cancele quando quiser.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -102,7 +102,10 @@ section{position:relative;z-index:1}
 
 /* PRICING */
 .pricing{padding:80px 0;border-top:1px solid var(--border);text-align:center}
-.price-card{background:var(--s1);border:2px solid var(--blue);border-radius:20px;padding:40px;max-width:440px;margin:48px auto 0;position:relative}
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1200px;margin:40px auto 0}
+.price-card{background:var(--s1);border:2px solid var(--border);border-radius:20px;padding:32px;position:relative;transition:border-color .3s,transform .3s}
+.price-card:hover{border-color:var(--blue);transform:translateY(-4px)}
+.price-card.featured{border-color:var(--blue);background:linear-gradient(135deg,rgba(59,130,246,.08) 0%,rgba(59,130,246,.03) 100%)}
 .price-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:11px;font-weight:700;padding:4px 16px;border-radius:100px;letter-spacing:.5px;white-space:nowrap}
 .price-name{font-family:var(--sans);font-size:18px;font-weight:700;margin-bottom:8px}
 .price-value{display:flex;align-items:baseline;gap:6px;justify-content:center;margin-bottom:6px}
@@ -343,34 +346,102 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
 <!-- PRICING -->
 <section class="pricing" id="preco">
   <div class="container">
-    <div class="section-badge">Preço</div>
-    <h2 class="section-title">Um preço justo.<br>Para sempre.</h2>
-    <p class="section-sub" style="margin:12px auto 0">Sem mensalidade, sem surpresa. Pague uma vez e use para sempre.</p>
-    <div class="price-card">
-      <div class="price-badge">OFERTA DE LANÇAMENTO</div>
-      <div class="price-name">FinanceOS — Licença Vitalícia</div>
-      <div class="price-value">
-        <span class="price-from">R$ 97</span>
+    <div style="text-align:center">
+      <div class="section-badge">Preço</div>
+      <h2 class="section-title">Escolha o plano ideal<br>para você.</h2>
+      <p class="section-sub" style="margin:12px auto 48px">Todos os planos incluem todas as funcionalidades. Escolha a periodicidade que melhor se encaixa.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- PLANO MENSAL -->
+      <div class="price-card">
+        <div class="price-name">Mensal</div>
+        <div class="price-value">
+          <span style="font-size:20px;font-weight:600;color:var(--muted)">R$</span>
+          <span class="price-main">9,90</span>
+          <span style="font-size:20px;font-weight:600;color:var(--light)">/mês</span>
+        </div>
+        <div class="price-period">Renova automaticamente</div>
+        <div class="price-features">
+          <div class="price-feat"><span class="price-feat-check">✓</span>Dashboard completo</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Gráficos e relatórios</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Contas a pagar/receber</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Metas financeiras</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Cartão de crédito</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Exportação CSV</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Suporte por email</div>
+        </div>
+        <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=c2c4f7a761774a3fb01019c356e6d4c1" class="price-btn" target="_blank">
+          Começar agora →
+        </a>
       </div>
-      <div style="display:flex;align-items:baseline;gap:4px;justify-content:center;margin-bottom:6px">
-        <span style="font-size:24px;font-weight:600;color:var(--light)">R$</span>
-        <span class="price-main">37</span>
+
+      <!-- PLANO TRIMESTRAL -->
+      <div class="price-card">
+        <div class="price-badge">ECONOMIZE 16%</div>
+        <div class="price-name">Trimestral</div>
+        <div class="price-value">
+          <span style="font-size:20px;font-weight:600;color:var(--muted)">R$</span>
+          <span class="price-main">24,90</span>
+          <span style="font-size:20px;font-weight:600;color:var(--light)">/3 meses</span>
+        </div>
+        <div class="price-period" style="color:var(--green)">Equivalente a R$8,30/mês</div>
+        <div class="price-features">
+          <div class="price-feat"><span class="price-feat-check">✓</span>Tudo do plano mensal</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Exportação PDF</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Relatórios avançados</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Prioridade moderada</div>
+        </div>
+        <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=01d4ff64f0764ec5be6e937f3f510821" class="price-btn" target="_blank">
+          Começar agora →
+        </a>
       </div>
-      <div class="price-period">✓ Pagamento único · Acesso vitalício · Sem mensalidade</div>
-      <div class="price-features">
-        <div class="price-feat"><span class="price-feat-check">✓</span>Dashboard com gráficos e relatórios</div>
-        <div class="price-feat"><span class="price-feat-check">✓</span>Controle de receitas e despesas</div>
-        <div class="price-feat"><span class="price-feat-check">✓</span>Metas financeiras com progresso visual</div>
-        <div class="price-feat"><span class="price-feat-check">✓</span>Contas a pagar e receber</div>
-        <div class="price-feat"><span class="price-feat-check">✓</span>Categorias personalizadas</div>
-        <div class="price-feat"><span class="price-feat-check">✓</span>Exportação CSV</div>
-        <div class="price-feat"><span class="price-feat-check">✓</span>Funciona offline, sem servidor</div>
-        <div class="price-feat"><span class="price-feat-check">✓</span>Atualizações incluídas</div>
+
+      <!-- PLANO ANUAL (DESTAQUE) -->
+      <div class="price-card featured">
+        <div class="price-badge">MAIS POPULAR</div>
+        <div class="price-name">Anual</div>
+        <div class="price-value">
+          <span style="font-size:20px;font-weight:600;color:var(--muted)">R$</span>
+          <span class="price-main">89,90</span>
+          <span style="font-size:20px;font-weight:600;color:var(--light)">/ano</span>
+        </div>
+        <div class="price-period" style="color:var(--green)">Equivalente a R$7,49/mês · Economize 25%</div>
+        <div class="price-features">
+          <div class="price-feat"><span class="price-feat-check">✓</span>Tudo do plano trimestral</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span><b>Suporte prioritário</b></div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Backup automático</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Funcionalidades beta</div>
+        </div>
+        <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=fe1a52fc272047deb3f120a28dcde430" class="price-btn" target="_blank">
+          Começar agora →
+        </a>
       </div>
-      <a href="https://pay.hotmart.com/N105027903Y" class="price-btn" target="_blank">
-        Quero comprar agora →
-      </a>
-      <p class="price-guarantee">🔒 Pagamento seguro · Código entregue por email em até 5 minutos</p>
+
+      <!-- PLANO VITALÍCIO -->
+      <div class="price-card">
+        <div class="price-badge" style="background:var(--amber)">PAGAMENTO ÚNICO</div>
+        <div class="price-name">Vitalício</div>
+        <div class="price-value">
+          <span style="font-size:20px;font-weight:600;color:var(--muted)">R$</span>
+          <span class="price-main">127</span>
+          <span style="font-size:20px;font-weight:600;color:var(--light)">único</span>
+        </div>
+        <div class="price-period" style="color:var(--amber)">Acesso para sempre · Sem mensalidade</div>
+        <div class="price-features">
+          <div class="price-feat"><span class="price-feat-check">✓</span>Tudo do plano anual</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Acesso vitalício</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Atualizações gratuitas</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span><b>Suporte VIP</b></div>
+        </div>
+        <a href="https://mpago.la/24VCnWc" class="price-btn" target="_blank">
+          Comprar agora →
+        </a>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:32px">
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">🔒 Pagamento seguro via Mercado Pago · Após o pagamento, você receberá um código de acesso via WhatsApp</p>
       <p style="font-size:11px;color:var(--muted);margin-top:8px">App disponível em: <a href="https://financeos-roan.vercel.app" target="_blank" style="color:var(--blue)">financeos-roan.vercel.app</a></p>
     </div>
   </div>
@@ -386,7 +457,15 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
     <div class="faq-list">
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Como funciona o acesso após a compra? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Após o pagamento, você recebe um código de licença por email em até 5 minutos. Acesse o link do app, cole o código na tela de ativação e pronto — acesso liberado para sempre.</div>
+        <div class="faq-a">Após o pagamento, você recebe um código de licença por email em até 5 minutos. Acesse o link do app, cole o código na tela de ativação e pronto — acesso liberado.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Posso cancelar a assinatura? <span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Sim! Você pode cancelar a qualquer momento. Ao cancelar, seu acesso continua até o fim do período atual. Sem taxas de cancelamento.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Posso mudar de plano? <span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Sim. Você pode fazer upgrade ou downgrade do plano quando quiser. Ao mudar para um plano mais alto, a diferença é calculada proporcionalmente.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Meus dados ficam seguros? <span class="faq-chevron">▾</span></div>
@@ -402,11 +481,15 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Qual a forma de pagamento? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Aceitamos PIX, cartão de crédito e débito. Para comprar, basta enviar mensagem no WhatsApp que te enviamos o link de pagamento.</div>
+        <div class="faq-a">Aceitamos PIX, cartão de crédito e débito. Processamento seguro via Mercado Pago, a plataforma de pagamento mais confiável do Brasil.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Tem suporte? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Sim. Suporte via WhatsApp e email. Respondemos em até 24 horas em dias úteis.</div>
+        <div class="faq-a">Sim. Suporte via WhatsApp e email. Planos anuais e vitalício têm suporte prioritário. Respondemos em até 24 horas em dias úteis.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">O que acontece se o pagamento falhar? <span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Se o pagamento falhar, você receberá um email de notificação. Você terá 7 dias para regularizar antes do acesso ser suspenso. Se cancelar, seus dados permanecem salvos localmente.</div>
       </div>
     </div>
   </div>
@@ -417,10 +500,10 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
   <div class="container">
     <div class="cta-box">
       <h2>Pare de perder dinheiro<br><span>por falta de controle.</span></h2>
-      <p>Comece agora com R$37 — pagamento único, acesso para sempre. Sem surpresas, sem mensalidade.</p>
-      <a href="https://pay.hotmart.com/N105027903Y" class="btn-hero btn-hero-primary" target="_blank" style="display:inline-flex">
+      <p>Comece agora a partir de R$9,90/mês. Planos flexíveis, cancele quando quiser.</p>
+      <a href="#preco" class="btn-hero btn-hero-primary" target="_blank" style="display:inline-flex">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.476 2 2 6.476 2 12c0 1.908.506 3.7 1.387 5.24L2 22l4.895-1.363C8.357 21.517 10.138 22 12 22c5.524 0 10-4.476 10-10S17.523 2 11.999 2zm.001 18.154c-1.696 0-3.296-.47-4.668-1.287l-.334-.197-3.469.967.938-3.588-.216-.349C3.502 14.374 3 13.233 3 12c0-4.963 4.037-9 9-9s9 4.037 9 9-4.037 9-9 9z"/></svg>
-        Comprar via WhatsApp
+        Ver planos →
       </a>
     </div>
   </div>
