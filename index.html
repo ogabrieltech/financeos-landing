@@ -102,7 +102,8 @@ section{position:relative;z-index:1}
 
 /* PRICING */
 .pricing{padding:80px 0;border-top:1px solid var(--border);text-align:center;width:100%;box-sizing:border-box;display:flex;flex-direction:column;align-items:center}
-.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1200px;margin:40px auto 0;width:100%;box-sizing:border-box}
+.pricing-container{max-width:1200px;margin:0 auto;padding:0;width:100%;box-sizing:border-box;display:flex;flex-direction:column;align-items:center}
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:100%;width:100%;margin:40px 0;padding:0;box-sizing:border-box}
 .price-card{background:var(--s1);border:2px solid var(--border);border-radius:20px;padding:32px;position:relative;transition:border-color .3s,transform .3s}
 .price-card:hover{border-color:var(--blue);transform:translateY(-4px)}
 .price-card.featured{border-color:var(--blue);background:linear-gradient(135deg,rgba(59,130,246,.08) 0%,rgba(59,130,246,.03) 100%)}
@@ -182,7 +183,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
       Novo produto — ogabrieltech
     </div>
     <h1>Controle financeiro<br><span>sem complicação.</span></h1>
-    <p class="hero-sub">Acompanhe receitas, despesas, metas e contas a pagar em um só lugar. Visual, intuitivo e sem mensalidade.</p>
+    <p class="hero-sub">Acompanhe receitas, despesas, metas e contas a pagar em um só lugar. Visual, intuitivo e completo.</p>
     <div class="hero-actions">
       <a href="#preco" class="btn-hero btn-hero-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
@@ -345,14 +346,12 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
 
 <!-- PRICING -->
 <section class="pricing" id="preco">
-  <div class="container">
-    <div style="text-align:center">
+    <div class="pricing-container" style="text-align:center">
       <div class="section-badge">Preço</div>
       <h2 class="section-title">Escolha o plano ideal<br>para você.</h2>
       <p class="section-sub" style="margin:12px auto 48px">Todos os planos incluem todas as funcionalidades. Escolha a periodicidade que melhor se encaixa.</p>
-    </div>
 
-    <div class="pricing-grid">
+      <div class="pricing-grid">
       <!-- PLANO MENSAL -->
       <div class="price-card">
         <div class="price-name">Mensal</div>
@@ -444,7 +443,6 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
       <p style="font-size:12px;color:var(--muted);margin-bottom:8px">🔒 Pagamento seguro via Mercado Pago · Após o pagamento, você receberá um código de acesso via WhatsApp</p>
       <p style="font-size:11px;color:var(--muted);margin-top:8px">App disponível em: <a href="https://financeos-roan.vercel.app" target="_blank" style="color:var(--blue)">financeos-roan.vercel.app</a></p>
     </div>
-  </div>
 </section>
 
 <!-- FAQ -->
