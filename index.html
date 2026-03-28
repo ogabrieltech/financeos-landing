@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FinanceOS — Controle Financeiro Inteligente | ogabrieltech</title>
+<title>FinanceOS — Controle Financeiro Inteligente</title>
 <meta name="description" content="Controle suas finanças de forma simples e visual. Planos a partir de R$9,90/mês. Pague só o que usar, cancele quando quiser.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -103,8 +103,8 @@ section{position:relative;z-index:1}
 /* PRICING */
 .pricing{padding:80px 0;border-top:1px solid var(--border);text-align:center;width:100%;box-sizing:border-box;display:flex;flex-direction:column;align-items:center}
 .pricing-container{max-width:1200px;margin:0 auto;padding:0;width:100%;box-sizing:border-box;display:flex;flex-direction:column;align-items:center}
-.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:100%;width:100%;margin:40px 0;padding:0;box-sizing:border-box}
-.price-card{background:var(--s1);border:2px solid var(--border);border-radius:20px;padding:32px;position:relative;transition:border-color .3s,transform .3s}
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:100%;width:100%;margin:40px 0;padding:0;box-sizing:border-box;align-items:stretch}
+.price-card{background:var(--s1);border:2px solid var(--border);border-radius:20px;padding:32px;position:relative;transition:border-color .3s,transform .3s;display:flex;flex-direction:column}
 .price-card:hover{border-color:var(--blue);transform:translateY(-4px)}
 .price-card.featured{border-color:var(--blue);background:linear-gradient(135deg,rgba(59,130,246,.08) 0%,rgba(59,130,246,.03) 100%)}
 .price-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:11px;font-weight:700;padding:4px 16px;border-radius:100px;letter-spacing:.5px;white-space:nowrap}
@@ -114,11 +114,11 @@ section{position:relative;z-index:1}
 .price-main{font-family:var(--sans);font-size:56px;font-weight:800;color:var(--white);letter-spacing:-2px}
 .price-cents{font-size:24px;font-weight:600;color:var(--light)}
 .price-period{font-size:13px;color:var(--green);margin-bottom:24px;font-weight:600}
-.price-features{text-align:left;margin-bottom:28px}
 .price-feat{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--light)}
 .price-feat:last-child{border-bottom:none}
 .price-feat-check{color:var(--green);font-size:15px;flex-shrink:0}
-.price-btn{display:block;width:100%;background:var(--blue);color:#fff;padding:15px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;text-align:center;transition:all .2s;font-family:var(--sans)}
+.price-features{text-align:left;margin-bottom:28px;flex:1}
+.price-btn{display:block;width:100%;background:var(--blue);color:#fff;padding:15px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;text-align:center;transition:all .2s;font-family:var(--sans);margin-top:auto}
 .price-btn:hover{background:var(--blue2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(59,130,246,.4)}
 .price-guarantee{font-size:12px;color:var(--muted);margin-top:14px}
 
@@ -148,6 +148,9 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
 .footer-links a:hover{color:var(--blue)}
 
 /* RESPONSIVE */
+@media(max-width:900px){
+  .pricing-grid{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:768px){
   .features-grid,.who-grid{grid-template-columns:1fr 1fr}
   .preview-inner{grid-template-columns:1fr}
@@ -155,7 +158,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
   footer{flex-direction:column;gap:16px;text-align:center}
 }
 @media(max-width:480px){
-  .features-grid,.who-grid{grid-template-columns:1fr}
+  .features-grid,.who-grid,.pricing-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -172,7 +175,10 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
     </div>
     <span class="nav-logo-text">Finance<span>OS</span></span>
   </a>
-  <a href="#preco" class="nav-cta">Comprar agora</a>
+  <div style="display:flex;align-items:center;gap:16px">
+    <a href="/app" style="font-size:13px;color:var(--light);text-decoration:none;font-family:var(--sans);font-weight:600;transition:color .15s" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#999'">Acessar app</a>
+    <a href="#preco" class="nav-cta">Comprar agora</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -180,7 +186,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
   <div class="container">
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
-      Novo produto — ogabrieltech
+      Plataforma financeira completa
     </div>
     <h1>Controle financeiro<br><span>sem complicação.</span></h1>
     <p class="hero-sub">Acompanhe receitas, despesas, metas e contas a pagar em um só lugar. Visual, intuitivo e completo.</p>
@@ -264,11 +270,11 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
   <div class="container">
     <p class="proof-text">Desenvolvido por quem entende de tecnologia e finanças pessoais</p>
     <div class="proof-badges">
-      <div class="proof-badge"><span class="proof-icon">✓</span> Sem servidor necessário</div>
-      <div class="proof-badge"><span class="proof-icon">✓</span> Dados salvos localmente</div>
+      <div class="proof-badge"><span class="proof-icon">✓</span> Sync na nuvem</div>
       <div class="proof-badge"><span class="proof-icon">✓</span> Funciona offline</div>
       <div class="proof-badge"><span class="proof-icon">✓</span> Exportação CSV</div>
-      <div class="proof-badge"><span class="proof-icon">✓</span> Zero mensalidade</div>
+      <div class="proof-badge"><span class="proof-icon">✓</span> Acesso imediato</div>
+      <div class="proof-badge"><span class="proof-icon">✓</span> Cancele quando quiser</div>
     </div>
   </div>
 </section>
@@ -283,12 +289,12 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
       <div class="feat-card">
         <div class="feat-icon" style="background:rgba(34,197,94,.1)">💰</div>
         <div class="feat-title">Receitas e Despesas</div>
-        <div class="feat-desc">Registre e categorize todos os seus lançamentos financeiros. Visualize o saldo em tempo real com histórico completo.</div>
+        <div class="feat-desc">Registre e categorize todos os seus lançamentos. Saldo em tempo real com categorização automática por regras.</div>
       </div>
       <div class="feat-card">
         <div class="feat-icon" style="background:rgba(59,130,246,.1)">📊</div>
-        <div class="feat-title">Gráficos e Relatórios</div>
-        <div class="feat-desc">Dashboards visuais com fluxo de caixa mensal, distribuição por categoria e evolução dos últimos 12 meses.</div>
+        <div class="feat-title">Relatórios Avançados</div>
+        <div class="feat-desc">Evolução patrimonial, comparativo mensal, drill-down por categoria, médias e tendências com gráficos interativos.</div>
       </div>
       <div class="feat-card">
         <div class="feat-icon" style="background:rgba(168,85,247,.1)">🎯</div>
@@ -301,14 +307,29 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
         <div class="feat-desc">Cadastre vencimentos e nunca perca um prazo. Alertas visuais para contas próximas e vencidas.</div>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(245,158,11,.1)">🏷️</div>
-        <div class="feat-title">Categorias Personalizadas</div>
-        <div class="feat-desc">Crie suas próprias categorias com cores personalizadas para organizar as finanças do seu jeito.</div>
+        <div class="feat-icon" style="background:rgba(6,182,212,.1)">☁️</div>
+        <div class="feat-title">Sync na Nuvem</div>
+        <div class="feat-desc">Seus dados sincronizam automaticamente entre dispositivos. Funciona offline e sincroniza quando reconectar.</div>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(6,182,212,.1)">📤</div>
-        <div class="feat-title">Exportar para Planilha</div>
-        <div class="feat-desc">Exporte todos os seus dados em CSV com um clique. Compatível com Excel e Google Sheets.</div>
+        <div class="feat-icon" style="background:rgba(245,158,11,.1)">🏆</div>
+        <div class="feat-title">Gamificação</div>
+        <div class="feat-desc">Score de saúde financeira, badges de conquistas e streak de dias economizando. Finanças viram um jogo.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon" style="background:rgba(236,72,153,.1)">💳</div>
+        <div class="feat-title">Cartão de Crédito</div>
+        <div class="feat-desc">Controle faturas, limite disponível e gastos do cartão separadamente. Visão clara do que você deve.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon" style="background:rgba(139,92,246,.1)">📈</div>
+        <div class="feat-title">Projeção Financeira</div>
+        <div class="feat-desc">Veja a projeção do seu saldo para os próximos 90 dias com base em receitas e despesas recorrentes.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon" style="background:rgba(20,184,166,.1)">⚡</div>
+        <div class="feat-title">Dashboard Customizável</div>
+        <div class="feat-desc">Organize os widgets do dashboard como preferir. Arraste, reordene e ative/desative módulos com um clique.</div>
       </div>
     </div>
   </div>
@@ -362,11 +383,10 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
         </div>
         <div class="price-period">Renova automaticamente</div>
         <div class="price-features">
-          <div class="price-feat"><span class="price-feat-check">✓</span>Dashboard completo</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Gráficos e relatórios</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Contas a pagar/receber</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Metas financeiras</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Cartão de crédito</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Todas as funcionalidades</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Sync na nuvem</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Dashboard customizável</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Relatórios avançados</div>
           <div class="price-feat"><span class="price-feat-check">✓</span>Exportação CSV</div>
           <div class="price-feat"><span class="price-feat-check">✓</span>Suporte por email</div>
         </div>
@@ -386,10 +406,12 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
         </div>
         <div class="price-period" style="color:var(--green)">Equivalente a R$8,30/mês</div>
         <div class="price-features">
-          <div class="price-feat"><span class="price-feat-check">✓</span>Tudo do plano mensal</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Exportação PDF</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Todas as funcionalidades</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Sync na nuvem</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Dashboard customizável</div>
           <div class="price-feat"><span class="price-feat-check">✓</span>Relatórios avançados</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Prioridade moderada</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Exportação CSV + PDF</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Suporte por email</div>
         </div>
         <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=01d4ff64f0764ec5be6e937f3f510821" class="price-btn" target="_blank">
           Começar agora →
@@ -407,10 +429,12 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
         </div>
         <div class="price-period" style="color:var(--green)">Equivalente a R$7,49/mês · Economize 25%</div>
         <div class="price-features">
-          <div class="price-feat"><span class="price-feat-check">✓</span>Tudo do plano trimestral</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Todas as funcionalidades</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Sync na nuvem</div>
           <div class="price-feat"><span class="price-feat-check">✓</span><b>Suporte prioritário</b></div>
           <div class="price-feat"><span class="price-feat-check">✓</span>Backup automático</div>
           <div class="price-feat"><span class="price-feat-check">✓</span>Funcionalidades beta</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Exportação CSV + PDF</div>
         </div>
         <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=fe1a52fc272047deb3f120a28dcde430" class="price-btn" target="_blank">
           Começar agora →
@@ -426,12 +450,14 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
           <span class="price-main">127</span>
           <span style="font-size:20px;font-weight:600;color:var(--light)">único</span>
         </div>
-        <div class="price-period" style="color:var(--amber)">Acesso vitalício · Sem renovação · Pague uma vez</div>
+        <div class="price-period" style="color:var(--amber)">Pague uma vez, use para sempre</div>
         <div class="price-features">
-          <div class="price-feat"><span class="price-feat-check">✓</span>Tudo do plano anual</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Todas as funcionalidades</div>
           <div class="price-feat"><span class="price-feat-check">✓</span>Acesso vitalício</div>
           <div class="price-feat"><span class="price-feat-check">✓</span>Atualizações gratuitas</div>
           <div class="price-feat"><span class="price-feat-check">✓</span><b>Suporte VIP</b></div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Backup automático</div>
+          <div class="price-feat"><span class="price-feat-check">✓</span>Funcionalidades beta</div>
         </div>
         <a href="https://mpago.la/24VCnWc" class="price-btn" target="_blank">
           Comprar agora →
@@ -440,8 +466,8 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
     </div>
 
     <div style="text-align:center;margin-top:32px">
-      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">🔒 Pagamento seguro via Mercado Pago · Após o pagamento, você receberá um código de acesso via WhatsApp</p>
-      <p style="font-size:11px;color:var(--muted);margin-top:8px">App disponível em: <a href="https://financeos-roan.vercel.app" target="_blank" style="color:var(--blue)">financeos-roan.vercel.app</a></p>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">🔒 Pagamento seguro via Mercado Pago · Acesso liberado automaticamente após confirmação</p>
+      <p style="font-size:11px;color:var(--muted);margin-top:8px">App disponível em: <a href="/app" style="color:var(--blue)">financeos.app.br/app</a></p>
     </div>
 </section>
 
@@ -455,7 +481,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
     <div class="faq-list">
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Como funciona o acesso após a compra? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Após o pagamento, você recebe um código de licença por email em até 5 minutos. Acesse o link do app, cole o código na tela de ativação e pronto — acesso liberado.</div>
+        <div class="faq-a">Após o pagamento, seu acesso é liberado automaticamente. Basta fazer login no app com o mesmo email usado na compra e todas as funcionalidades estarão disponíveis.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Posso cancelar a assinatura? <span class="faq-chevron">▾</span></div>
@@ -467,7 +493,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Meus dados ficam seguros? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Sim. Todos os dados são salvos localmente no seu navegador — nunca vão para nenhum servidor externo. Você tem total controle sobre suas informações financeiras.</div>
+        <div class="faq-a">Sim. Seus dados são sincronizados com segurança na nuvem via Supabase com criptografia. Você também tem uma cópia local offline no navegador para acesso rápido.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Precisa instalar algum programa? <span class="faq-chevron">▾</span></div>
@@ -475,7 +501,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Posso usar em mais de um computador? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">O código de licença ativa o app em qualquer dispositivo. Como os dados são salvos localmente, cada dispositivo terá seus próprios dados — para sincronizar entre dispositivos, use a exportação CSV.</div>
+        <div class="faq-a">Sim! Sua conta sincroniza automaticamente na nuvem. Basta fazer login em qualquer dispositivo e seus dados estarão lá, sempre atualizados.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q">Qual a forma de pagamento? <span class="faq-chevron">▾</span></div>
