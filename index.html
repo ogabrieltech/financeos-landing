@@ -9,23 +9,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#000;--s1:#0d0d0d;--s2:#111;--border:#1e1e1e;--border2:#2a2a2a;
-  --blue:#3B82F6;--blue2:#2563EB;--green:#22c55e;--red:#ef4444;--amber:#f59e0b;
-  --white:#fff;--muted:#555;--light:#999;
+  --bg:#fff;--s1:#f8f9fb;--s2:#f0f1f4;--border:#e2e4e9;--border2:#d0d3da;
+  --blue:#3b82f6;--blue2:#294880;--green:#22c55e;--red:#ef4444;--amber:#f59e0b;
+  --text:#111;--muted:#888;--light:#555;
   --sans:'Sora',sans-serif;--body:'Inter',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--white);font-family:var(--body);overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden}
 
 /* GRID */
-body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(#111 1px,transparent 1px),linear-gradient(90deg,#111 1px,transparent 1px);background-size:56px 56px;opacity:.5;pointer-events:none;z-index:0}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(#e2e4e9 1px,transparent 1px),linear-gradient(90deg,#e2e4e9 1px,transparent 1px);background-size:56px 56px;opacity:.3;pointer-events:none;z-index:0}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,0,0,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%;height:64px;display:flex;align-items:center;justify-content:space-between}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%;height:64px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.nav-logo-icon{width:32px;height:32px;background:#0F1E40;border:1.5px solid var(--blue);border-radius:7px;display:flex;align-items:center;justify-content:center}
-.nav-logo-text{font-family:var(--sans);font-size:16px;font-weight:800;color:var(--white)}
+.nav-logo-icon{width:32px;height:32px;background:rgba(59,130,246,.1);border:1.5px solid var(--blue);border-radius:7px;display:flex;align-items:center;justify-content:center}
+.nav-logo-text{font-family:var(--sans);font-size:16px;font-weight:800;color:var(--text)}
 .nav-logo-text span{color:var(--blue)}
 .nav-cta{background:var(--blue);color:#fff;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;transition:background .15s;font-family:var(--sans)}
 .nav-cta:hover{background:var(--blue2)}
@@ -36,16 +36,16 @@ section{position:relative;z-index:1}
 
 /* HERO */
 .hero{padding:140px 0 80px;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;color:var(--blue);margin-bottom:28px;letter-spacing:.3px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;color:var(--blue);margin-bottom:28px;letter-spacing:.3px}
 .hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
-.hero h1{font-family:var(--sans);font-size:clamp(38px,6vw,72px);font-weight:800;line-height:1.1;letter-spacing:-2px;margin-bottom:20px}
+.hero h1{font-family:var(--sans);font-size:clamp(38px,6vw,72px);font-weight:800;line-height:1.1;letter-spacing:-2px;margin-bottom:20px;color:var(--text)}
 .hero h1 span{color:var(--blue)}
 .hero-sub{font-size:clamp(15px,2vw,18px);color:var(--light);max-width:560px;margin:0 auto 36px;line-height:1.7}
 .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
 .btn-hero{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;transition:all .2s;font-family:var(--sans)}
 .btn-hero-primary{background:var(--blue);color:#fff}
-.btn-hero-primary:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(59,130,246,.3)}
+.btn-hero-primary:hover{background:var(--blue2);transform:translatéY(-2px);box-shadow:0 8px 30px rgba(59,130,246,.25)}
 .btn-hero-ghost{background:transparent;color:var(--light);border:1px solid var(--border2)}
 .btn-hero-ghost:hover{border-color:var(--blue);color:var(--blue)}
 .hero-note{font-size:12px;color:var(--muted)}
@@ -53,23 +53,23 @@ section{position:relative;z-index:1}
 
 /* PREVIEW */
 .preview{padding:0 0 80px;text-align:center}
-.preview-wrap{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:20px;max-width:900px;margin:0 auto;box-shadow:0 40px 120px rgba(0,0,0,.6)}
+.preview-wrap{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:20px;max-width:900px;margin:0 auto;box-shadow:0 40px 120px rgba(0,0,0,.08)}
 .preview-bar{display:flex;align-items:center;gap:6px;margin-bottom:16px}
 .preview-dot{width:10px;height:10px;border-radius:50%}
-.preview-screen{background:#000;border-radius:10px;overflow:hidden;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
-.preview-inner{width:100%;height:100%;background:linear-gradient(135deg,#0a0a0a 0%,#0d1525 100%);display:grid;grid-template-columns:180px 1fr;font-family:var(--body)}
-.prev-sidebar{background:#0d0d0d;border-right:1px solid #1a1a1a;padding:16px 12px}
-.prev-logo{font-family:var(--sans);font-size:13px;font-weight:800;margin-bottom:20px;padding:8px}
+.preview-screen{background:var(--s2);border-radius:10px;overflow:hidden;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
+.preview-inner{width:100%;height:100%;background:linear-gradient(135deg,#f8f9fb 0%,#edf0f7 100%);display:grid;grid-templaté-columns:180px 1fr;font-family:var(--body)}
+.prev-sidebar{background:#fff;border-right:1px solid #e2e4e9;padding:16px 12px}
+.prev-logo{font-family:var(--sans);font-size:13px;font-weight:800;margin-bottom:20px;padding:8px;color:var(--text)}
 .prev-logo span{color:var(--blue)}
-.prev-nav-item{padding:7px 10px;border-radius:6px;font-size:11px;color:#555;margin-bottom:2px}
-.prev-nav-item.active{background:rgba(59,130,246,.12);color:var(--blue)}
+.prev-nav-item{padding:7px 10px;border-radius:6px;font-size:11px;color:#888;margin-bottom:2px}
+.prev-nav-item.active{background:rgba(59,130,246,.08);color:var(--blue)}
 .prev-main{padding:16px}
-.prev-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
-.prev-stat{background:#111;border:1px solid #1a1a1a;border-radius:8px;padding:10px;border-top:2px solid}
-.prev-stat-label{font-size:9px;color:#444;margin-bottom:4px;text-transform:uppercase}
+.prev-stats{display:grid;grid-templaté-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.prev-stat{background:#fff;border:1px solid #e2e4e9;border-radius:8px;padding:10px;border-top:2px solid}
+.prev-stat-label{font-size:9px;color:#888;margin-bottom:4px;text-transform:uppercase}
 .prev-stat-val{font-size:14px;font-weight:800;font-family:var(--sans)}
-.prev-charts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.prev-chart{background:#111;border:1px solid #1a1a1a;border-radius:8px;padding:10px;height:80px;display:flex;align-items:flex-end;gap:3px}
+.prev-charts{display:grid;grid-templaté-columns:1fr 1fr;gap:8px}
+.prev-chart{background:#fff;border:1px solid #e2e4e9;border-radius:8px;padding:10px;height:80px;display:flex;align-items:flex-end;gap:3px}
 .prev-bar{background:rgba(59,130,246,.5);border-radius:2px;flex:1}
 .prev-bar.green{background:rgba(34,197,94,.5)}
 
@@ -82,60 +82,61 @@ section{position:relative;z-index:1}
 
 /* FEATURES */
 .features{padding:80px 0;border-top:1px solid var(--border)}
-.section-badge{display:inline-block;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);color:var(--blue);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 14px;border-radius:4px;margin-bottom:16px}
-.section-title{font-family:var(--sans);font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-1px;margin-bottom:12px}
+.section-badge{display:inline-block;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);color:var(--blue);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 14px;border-radius:4px;margin-bottom:16px}
+.section-title{font-family:var(--sans);font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-1px;margin-bottom:12px;color:var(--text)}
 .section-sub{font-size:15px;color:var(--light);max-width:500px;line-height:1.7;margin-bottom:48px}
-.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.features-grid{display:grid;grid-templaté-columns:repeat(3,1fr);gap:16px}
 .feat-card{background:var(--s1);border:1px solid var(--border);border-radius:14px;padding:24px;transition:border-color .2s,transform .2s}
-.feat-card:hover{border-color:rgba(59,130,246,.4);transform:translateY(-3px)}
+.feat-card:hover{border-color:rgba(59,130,246,.35);transform:translatéY(-3px);box-shadow:0 8px 24px rgba(59,130,246,.06)}
 .feat-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:16px}
-.feat-title{font-family:var(--sans);font-size:15px;font-weight:700;margin-bottom:8px}
+.feat-title{font-family:var(--sans);font-size:15px;font-weight:700;margin-bottom:8px;color:var(--text)}
 .feat-desc{font-size:13px;color:var(--light);line-height:1.6}
 
 /* WHO */
 .who{padding:80px 0;border-top:1px solid var(--border)}
-.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px}
-.who-card{background:var(--s1);border:1px solid var(--border);border-radius:14px;padding:22px;text-align:center}
+.who-grid{display:grid;grid-templaté-columns:repeat(4,1fr);gap:14px;margin-top:48px}
+.who-card{background:var(--s1);border:1px solid var(--border);border-radius:14px;padding:22px;text-align:center;transition:border-color .2s,transform .2s}
+.who-card:hover{border-color:rgba(59,130,246,.3);transform:translatéY(-2px)}
 .who-emoji{font-size:32px;margin-bottom:12px}
-.who-title{font-family:var(--sans);font-size:14px;font-weight:700;margin-bottom:6px}
+.who-title{font-family:var(--sans);font-size:14px;font-weight:700;margin-bottom:6px;color:var(--text)}
 .who-desc{font-size:12px;color:var(--light);line-height:1.5}
 
 /* PRICING */
 .pricing{padding:80px 0;border-top:1px solid var(--border);text-align:center;width:100%;box-sizing:border-box;display:flex;flex-direction:column;align-items:center}
 .pricing-container{max-width:1200px;margin:0 auto;padding:0;width:100%;box-sizing:border-box;display:flex;flex-direction:column;align-items:center}
-.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:100%;width:100%;margin:40px 0;padding:0;box-sizing:border-box;align-items:stretch}
+.pricing-grid{display:grid;grid-templaté-columns:repeat(4,1fr);gap:20px;max-width:100%;width:100%;margin:40px 0;padding:0;box-sizing:border-box;align-items:stretch}
 .price-card{background:var(--s1);border:2px solid var(--border);border-radius:20px;padding:32px;position:relative;transition:border-color .3s,transform .3s;display:flex;flex-direction:column}
-.price-card:hover{border-color:var(--blue);transform:translateY(-4px)}
-.price-card.featured{border-color:var(--blue);background:linear-gradient(135deg,rgba(59,130,246,.08) 0%,rgba(59,130,246,.03) 100%)}
-.price-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:11px;font-weight:700;padding:4px 16px;border-radius:100px;letter-spacing:.5px;white-space:nowrap}
-.price-name{font-family:var(--sans);font-size:18px;font-weight:700;margin-bottom:8px}
+.price-card:hover{border-color:var(--blue);transform:translatéY(-4px);box-shadow:0 12px 32px rgba(59,130,246,.1)}
+.price-card.featured{border-color:var(--blue);background:linear-gradient(135deg,rgba(59,130,246,.06) 0%,rgba(59,130,246,.02) 100%)}
+.price-badge{position:absolute;top:-14px;left:50%;transform:translatéX(-50%);background:var(--blue);color:#fff;font-size:11px;font-weight:700;padding:4px 16px;border-radius:100px;letter-spacing:.5px;white-space:nowrap}
+.price-name{font-family:var(--sans);font-size:18px;font-weight:700;margin-bottom:8px;color:var(--text)}
 .price-value{display:flex;align-items:baseline;gap:6px;justify-content:center;margin-bottom:6px}
 .price-from{font-size:13px;color:var(--muted);text-decoration:line-through}
-.price-main{font-family:var(--sans);font-size:56px;font-weight:800;color:var(--white);letter-spacing:-2px}
+.price-main{font-family:var(--sans);font-size:56px;font-weight:800;color:var(--text);letter-spacing:-2px}
 .price-cents{font-size:24px;font-weight:600;color:var(--light)}
 .price-period{font-size:13px;color:var(--green);margin-bottom:24px;font-weight:600}
 .price-feat{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--light)}
 .price-feat:last-child{border-bottom:none}
-.price-feat-check{color:var(--green);font-size:15px;flex-shrink:0}
+.price-feat-check{color:var(--blue);font-size:15px;flex-shrink:0}
 .price-features{text-align:left;margin-bottom:28px;flex:1}
 .price-btn{display:block;width:100%;background:var(--blue);color:#fff;padding:15px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;text-align:center;transition:all .2s;font-family:var(--sans);margin-top:auto}
-.price-btn:hover{background:var(--blue2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(59,130,246,.4)}
+.price-btn:hover{background:var(--blue2);transform:translatéY(-1px);box-shadow:0 8px 24px rgba(59,130,246,.25)}
 .price-guarantee{font-size:12px;color:var(--muted);margin-top:14px}
 
 /* FAQ */
 .faq{padding:80px 0;border-top:1px solid var(--border)}
 .faq-list{max-width:680px;margin:48px auto 0}
 .faq-item{border-bottom:1px solid var(--border);padding:20px 0;cursor:pointer}
-.faq-q{display:flex;align-items:center;justify-content:space-between;font-size:15px;font-weight:600;color:var(--white)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;font-size:15px;font-weight:600;color:var(--text)}
 .faq-a{font-size:13px;color:var(--light);line-height:1.7;margin-top:12px;display:none}
 .faq-item.open .faq-a{display:block}
-.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-item.open .faq-chevron{transform:rotaté(180deg)}
 .faq-chevron{transition:transform .2s;color:var(--muted);flex-shrink:0}
 
 /* CTA FINAL */
 .cta-final{padding:80px 0;border-top:1px solid var(--border);text-align:center}
-.cta-box{background:linear-gradient(135deg,#0d1525 0%,#0a0a12 100%);border:1px solid rgba(59,130,246,.3);border-radius:20px;padding:60px 40px;max-width:680px;margin:0 auto}
-.cta-box h2{font-family:var(--sans);font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:-1px;margin-bottom:16px}
+.cta-box{background:linear-gradient(135deg,rgba(59,130,246,.06) 0%,rgba(41,72,128,.04) 100%);border:1px solid rgba(59,130,246,.2);border-radius:20px;padding:60px 40px;max-width:680px;margin:0 auto}
+.cta-box h2{font-family:var(--sans);font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:-1px;margin-bottom:16px;color:var(--text)}
 .cta-box h2 span{color:var(--blue)}
 .cta-box p{font-size:15px;color:var(--light);margin-bottom:32px;line-height:1.7}
 
@@ -149,16 +150,16 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .pricing-grid{grid-template-columns:repeat(2,1fr)}
+  .pricing-grid{grid-templaté-columns:repeat(2,1fr)}
 }
 @media(max-width:768px){
-  .features-grid,.who-grid{grid-template-columns:1fr 1fr}
-  .preview-inner{grid-template-columns:1fr}
+  .features-grid,.who-grid{grid-templaté-columns:1fr 1fr}
+  .preview-inner{grid-templaté-columns:1fr}
   .prev-sidebar{display:none}
   footer{flex-direction:column;gap:16px;text-align:center}
 }
 @media(max-width:480px){
-  .features-grid,.who-grid,.pricing-grid{grid-template-columns:1fr}
+  .features-grid,.who-grid,.pricing-grid{grid-templaté-columns:1fr}
 }
 </style>
 </head>
@@ -176,7 +177,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
     <span class="nav-logo-text">Finance<span>OS</span></span>
   </a>
   <div style="display:flex;align-items:center;gap:16px">
-    <a href="/app" style="font-size:13px;color:var(--light);text-decoration:none;font-family:var(--sans);font-weight:600;transition:color .15s" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#999'">Acessar app</a>
+    <a href="/app" style="font-size:13px;color:var(--light);text-decoration:none;font-family:var(--sans);font-weight:600;transition:color .15s" onmouseover="this.style.color='#3b82f6'" onmouseout="this.style.color='#555'">Acessar app</a>
     <a href="#preco" class="nav-cta">Comprar agora</a>
   </div>
 </nav>
@@ -197,7 +198,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
       </a>
       <a href="#funcionalidades" class="btn-hero btn-hero-ghost">Ver funcionalidades</a>
     </div>
-    <p class="hero-note"><span>✓</span> Planos flexíveis · Cancele quando quiser · Acesso imediato</p>
+    <p class="hero-note"><span>&#10003;</span> Planos flexíveis · Cancele quando quiser · Acesso imediato</p>
   </div>
 </section>
 
@@ -219,7 +220,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
             <div class="prev-nav-item">Contas</div>
             <div class="prev-nav-item">Metas</div>
             <div class="prev-nav-item">Relatórios</div>
-            <div class="prev-nav-item">Categorias</div>
+            <div class="prev-nav-item">Catégorias</div>
           </div>
           <div class="prev-main">
             <div class="prev-stats">
@@ -227,9 +228,9 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
                 <div class="prev-stat-label">Saldo</div>
                 <div class="prev-stat-val" style="color:#22c55e">R$3.876</div>
               </div>
-              <div class="prev-stat" style="border-color:#3B82F6">
+              <div class="prev-stat" style="border-color:#3b82f6">
                 <div class="prev-stat-label">Receitas</div>
-                <div class="prev-stat-val" style="color:#3B82F6">R$5.700</div>
+                <div class="prev-stat-val" style="color:#3b82f6">R$5.700</div>
               </div>
               <div class="prev-stat" style="border-color:#ef4444">
                 <div class="prev-stat-label">Despesas</div>
@@ -251,8 +252,8 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
               </div>
               <div class="prev-chart" style="align-items:center;justify-content:center">
                 <svg width="60" height="60" viewBox="0 0 60 60">
-                  <circle cx="30" cy="30" r="20" fill="none" stroke="#1a1a1a" stroke-width="8"/>
-                  <circle cx="30" cy="30" r="20" fill="none" stroke="#3B82F6" stroke-width="8" stroke-dasharray="75 125" stroke-dashoffset="-31" stroke-linecap="round"/>
+                  <circle cx="30" cy="30" r="20" fill="none" stroke="#e2e4e9" stroke-width="8"/>
+                  <circle cx="30" cy="30" r="20" fill="none" stroke="#3b82f6" stroke-width="8" stroke-dasharray="75 125" stroke-dashoffset="-31" stroke-linecap="round"/>
                   <circle cx="30" cy="30" r="20" fill="none" stroke="#22c55e" stroke-width="8" stroke-dasharray="40 160" stroke-dashoffset="-106" stroke-linecap="round"/>
                   <circle cx="30" cy="30" r="20" fill="none" stroke="#f59e0b" stroke-width="8" stroke-dasharray="25 175" stroke-dashoffset="-146" stroke-linecap="round"/>
                 </svg>
@@ -270,11 +271,11 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
   <div class="container">
     <p class="proof-text">Desenvolvido por quem entende de tecnologia e finanças pessoais</p>
     <div class="proof-badges">
-      <div class="proof-badge"><span class="proof-icon">✓</span> Sync na nuvem</div>
-      <div class="proof-badge"><span class="proof-icon">✓</span> Funciona offline</div>
-      <div class="proof-badge"><span class="proof-icon">✓</span> Exportação CSV</div>
-      <div class="proof-badge"><span class="proof-icon">✓</span> Acesso imediato</div>
-      <div class="proof-badge"><span class="proof-icon">✓</span> Cancele quando quiser</div>
+      <div class="proof-badge"><span class="proof-icon">&#10003;</span> Sync na nuvem</div>
+      <div class="proof-badge"><span class="proof-icon">&#10003;</span> Funciona offline</div>
+      <div class="proof-badge"><span class="proof-icon">&#10003;</span> Exportação CSV</div>
+      <div class="proof-badge"><span class="proof-icon">&#10003;</span> Acesso imediato</div>
+      <div class="proof-badge"><span class="proof-icon">&#10003;</span> Cancele quando quiser</div>
     </div>
   </div>
 </section>
@@ -287,47 +288,47 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
     <p class="section-sub">Simples por fora, completo por dentro. Cada função foi pensada para quem quer resultado, não complexidade.</p>
     <div class="features-grid">
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(34,197,94,.1)">💰</div>
+        <div class="feat-icon" style="background:rgba(34,197,94,.08)">&#128176;</div>
         <div class="feat-title">Receitas e Despesas</div>
-        <div class="feat-desc">Registre e categorize todos os seus lançamentos. Saldo em tempo real com categorização automática por regras.</div>
+        <div class="feat-desc">Registre e catégorize todos os seus lançamentos. Saldo em tempo real com catégorização automática por regras.</div>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(59,130,246,.1)">📊</div>
+        <div class="feat-icon" style="background:rgba(59,130,246,.08)">&#128202;</div>
         <div class="feat-title">Relatórios Avançados</div>
-        <div class="feat-desc">Evolução patrimonial, comparativo mensal, drill-down por categoria, médias e tendências com gráficos interativos.</div>
+        <div class="feat-desc">Evolução patrimonial, comparativo mensal, drill-down por catégoria, médias e tendências com gráficos interativos.</div>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(168,85,247,.1)">🎯</div>
+        <div class="feat-icon" style="background:rgba(168,85,247,.08)">&#127919;</div>
         <div class="feat-title">Metas Financeiras</div>
         <div class="feat-desc">Defina objetivos com valor e prazo. Acompanhe o progresso com barra visual e adicione valores a qualquer momento.</div>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(239,68,68,.1)">📅</div>
+        <div class="feat-icon" style="background:rgba(239,68,68,.08)">&#128197;</div>
         <div class="feat-title">Contas a Pagar/Receber</div>
         <div class="feat-desc">Cadastre vencimentos e nunca perca um prazo. Alertas visuais para contas próximas e vencidas.</div>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(6,182,212,.1)">☁️</div>
+        <div class="feat-icon" style="background:rgba(6,182,212,.08)">&#9729;&#65039;</div>
         <div class="feat-title">Sync na Nuvem</div>
-        <div class="feat-desc">Seus dados sincronizam automaticamente entre dispositivos. Funciona offline e sincroniza quando reconectar.</div>
+        <div class="feat-desc">Seus dados sincronizam automáticamente entre dispositivos. Funciona offline e sincroniza quando reconectar.</div>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(245,158,11,.1)">🏆</div>
+        <div class="feat-icon" style="background:rgba(245,158,11,.08)">&#127942;</div>
         <div class="feat-title">Gamificação</div>
         <div class="feat-desc">Score de saúde financeira, badges de conquistas e streak de dias economizando. Finanças viram um jogo.</div>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(236,72,153,.1)">💳</div>
+        <div class="feat-icon" style="background:rgba(236,72,153,.08)">&#128179;</div>
         <div class="feat-title">Cartão de Crédito</div>
         <div class="feat-desc">Controle faturas, limite disponível e gastos do cartão separadamente. Visão clara do que você deve.</div>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(139,92,246,.1)">📈</div>
+        <div class="feat-icon" style="background:rgba(139,92,246,.08)">&#128200;</div>
         <div class="feat-title">Projeção Financeira</div>
         <div class="feat-desc">Veja a projeção do seu saldo para os próximos 90 dias com base em receitas e despesas recorrentes.</div>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(20,184,166,.1)">⚡</div>
+        <div class="feat-icon" style="background:rgba(20,184,166,.08)">&#9889;</div>
         <div class="feat-title">Dashboard Customizável</div>
         <div class="feat-desc">Organize os widgets do dashboard como preferir. Arraste, reordene e ative/desative módulos com um clique.</div>
       </div>
@@ -338,28 +339,28 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
 <!-- WHO -->
 <section class="who" id="quem">
   <div class="container">
-    <div class="section-badge">Para quem é</div>
+    <div class="section-badge">Para quem e</div>
     <h2 class="section-title">Para qualquer pessoa<br>que quer organização.</h2>
     <div class="who-grid">
       <div class="who-card">
-        <div class="who-emoji">👤</div>
-        <div class="who-title">Pessoa física</div>
+        <div class="who-emoji">&#128100;</div>
+        <div class="who-title">Pessoa fisica</div>
         <div class="who-desc">Controle salário, gastos mensais e construa suas reservas com clareza.</div>
       </div>
       <div class="who-card">
-        <div class="who-emoji">💼</div>
+        <div class="who-emoji">&#128188;</div>
         <div class="who-title">Freelancer</div>
-        <div class="who-desc">Gerencie projetos, receitas variáveis e despesas do negócio num só lugar.</div>
+        <div class="who-desc">Gerencie projetos, receitas variáveis e despesas do negócio num so lugar.</div>
       </div>
       <div class="who-card">
-        <div class="who-emoji">🏪</div>
+        <div class="who-emoji">&#127978;</div>
         <div class="who-title">Pequeno negócio</div>
         <div class="who-desc">Controle o fluxo de caixa da empresa sem precisar de software complexo.</div>
       </div>
       <div class="who-card">
-        <div class="who-emoji">👨‍👩‍👧</div>
-        <div class="who-title">Família</div>
-        <div class="who-desc">Organize as finanças da casa, defina metas em família e controle gastos.</div>
+        <div class="who-emoji">&#128104;&#8205;&#128105;&#8205;&#128103;</div>
+        <div class="who-title">Familia</div>
+        <div class="who-desc">Organize as finanças da casa, defina metas em familia e controle gastos.</div>
       </div>
     </div>
   </div>
@@ -379,19 +380,19 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
         <div class="price-value">
           <span style="font-size:20px;font-weight:600;color:var(--muted)">R$</span>
           <span class="price-main">9,90</span>
-          <span style="font-size:20px;font-weight:600;color:var(--light)">/mês</span>
+          <span style="font-size:20px;font-weight:600;color:var(--light)">/mes</span>
         </div>
-        <div class="price-period">Renova automaticamente</div>
+        <div class="price-period">Renova automáticamente</div>
         <div class="price-features">
-          <div class="price-feat"><span class="price-feat-check">✓</span>Todas as funcionalidades</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Sync na nuvem</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Dashboard customizável</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Relatórios avançados</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Exportação CSV</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Suporte por email</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Todas as funcionalidades</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Sync na nuvem</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Dashboard customizável</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Relatórios avancados</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Exportação CSV</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Suporte por email</div>
         </div>
         <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=c2c4f7a761774a3fb01019c356e6d4c1" class="price-btn" target="_blank">
-          Começar agora →
+          Comecar agora &#8594;
         </a>
       </div>
 
@@ -404,17 +405,17 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
           <span class="price-main">24,90</span>
           <span style="font-size:20px;font-weight:600;color:var(--light)">/3 meses</span>
         </div>
-        <div class="price-period" style="color:var(--green)">Equivalente a R$8,30/mês</div>
+        <div class="price-period" style="color:var(--green)">Equivalente a R$8,30/mes</div>
         <div class="price-features">
-          <div class="price-feat"><span class="price-feat-check">✓</span>Todas as funcionalidades</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Sync na nuvem</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Dashboard customizável</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Relatórios avançados</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Exportação CSV + PDF</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Suporte por email</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Todas as funcionalidades</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Sync na nuvem</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Dashboard customizável</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Relatórios avancados</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Exportação CSV + PDF</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Suporte por email</div>
         </div>
         <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=01d4ff64f0764ec5be6e937f3f510821" class="price-btn" target="_blank">
-          Começar agora →
+          Comecar agora &#8594;
         </a>
       </div>
 
@@ -427,46 +428,46 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
           <span class="price-main">89,90</span>
           <span style="font-size:20px;font-weight:600;color:var(--light)">/ano</span>
         </div>
-        <div class="price-period" style="color:var(--green)">Equivalente a R$7,49/mês · Economize 25%</div>
+        <div class="price-period" style="color:var(--green)">Equivalente a R$7,49/mes . Economize 25%</div>
         <div class="price-features">
-          <div class="price-feat"><span class="price-feat-check">✓</span>Todas as funcionalidades</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Sync na nuvem</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span><b>Suporte prioritário</b></div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Backup automático</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Funcionalidades beta</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Exportação CSV + PDF</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Todas as funcionalidades</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Sync na nuvem</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span><b>Suporte prioritário</b></div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Backup automático</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Funcionalidades beta</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Exportação CSV + PDF</div>
         </div>
         <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=fe1a52fc272047deb3f120a28dcde430" class="price-btn" target="_blank">
-          Começar agora →
+          Comecar agora &#8594;
         </a>
       </div>
 
-      <!-- PLANO VITALÍCIO -->
+      <!-- PLANO VITALICIO -->
       <div class="price-card">
-        <div class="price-badge" style="background:var(--amber)">PAGAMENTO ÚNICO</div>
+        <div class="price-badge" style="background:var(--amber)">PAGAMENTO UNICO</div>
         <div class="price-name">Vitalício</div>
         <div class="price-value">
           <span style="font-size:20px;font-weight:600;color:var(--muted)">R$</span>
           <span class="price-main">127</span>
-          <span style="font-size:20px;font-weight:600;color:var(--light)">único</span>
+          <span style="font-size:20px;font-weight:600;color:var(--light)">unico</span>
         </div>
         <div class="price-period" style="color:var(--amber)">Pague uma vez, use para sempre</div>
         <div class="price-features">
-          <div class="price-feat"><span class="price-feat-check">✓</span>Todas as funcionalidades</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Acesso vitalício</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Atualizações gratuitas</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span><b>Suporte VIP</b></div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Backup automático</div>
-          <div class="price-feat"><span class="price-feat-check">✓</span>Funcionalidades beta</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Todas as funcionalidades</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Acesso vitalício</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Atualizações gratuítas</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span><b>Suporte VIP</b></div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Backup automático</div>
+          <div class="price-feat"><span class="price-feat-check">&#10003;</span>Funcionalidades beta</div>
         </div>
         <a href="https://mpago.la/24VCnWc" class="price-btn" target="_blank">
-          Comprar agora →
+          Comprar agora &#8594;
         </a>
       </div>
     </div>
 
     <div style="text-align:center;margin-top:32px">
-      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">🔒 Pagamento seguro via Mercado Pago · Acesso liberado automaticamente após confirmação</p>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">&#128274; Pagamento seguro via Mercado Pago . Acesso liberado automáticamente após confirmação</p>
       <p style="font-size:11px;color:var(--muted);margin-top:8px">App disponível em: <a href="/app" style="color:var(--blue)">financeos.app.br/app</a></p>
     </div>
 </section>
@@ -480,40 +481,40 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
     </div>
     <div class="faq-list">
       <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">Como funciona o acesso após a compra? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Após o pagamento, seu acesso é liberado automaticamente. Basta fazer login no app com o mesmo email usado na compra e todas as funcionalidades estarão disponíveis.</div>
+        <div class="faq-q">Como funciona o acesso após a compra? <span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">Após o pagamento, seu acesso e liberado automáticamente. Basta fazer login no app com o mesmo email usado na compra e todas as funcionalidades estarão disponíveis.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">Posso cancelar a assinatura? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Sim! Você pode cancelar a qualquer momento. Ao cancelar, seu acesso continua até o fim do período atual. Sem taxas de cancelamento.</div>
+        <div class="faq-q">Posso cancelar a assinatura? <span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">Sim! Você pode cancelar a qualquer momento. Ao cancelar, seu acesso continua até o fim do periodo atual. Sem taxas de cancelamento.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">Posso mudar de plano? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Sim. Você pode fazer upgrade ou downgrade do plano quando quiser. Ao mudar para um plano mais alto, a diferença é calculada proporcionalmente.</div>
+        <div class="faq-q">Posso mudar de plano? <span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">Sim. Você pode fazer upgrade ou downgrade do plano quando quiser. Ao mudar para um plano mais alto, a diferença e calculada proporcionalmente.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">Meus dados ficam seguros? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Sim. Seus dados são sincronizados com segurança na nuvem via Supabase com criptografia. Você também tem uma cópia local offline no navegador para acesso rápido.</div>
+        <div class="faq-q">Meus dados ficam seguros? <span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">Sim. Seus dados sao sincronizados com segurança na nuvem via Supabase com criptografia. Você também tem uma cópia local offline no navegador para acesso rápido.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">Precisa instalar algum programa? <span class="faq-chevron">▾</span></div>
+        <div class="faq-q">Precisa instalar algum programa? <span class="faq-chevron">&#9662;</span></div>
         <div class="faq-a">Não. O FinanceOS roda diretamente no seu navegador (Chrome, Edge, Firefox). Não precisa instalar nada, funciona em qualquer computador.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">Posso usar em mais de um computador? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Sim! Sua conta sincroniza automaticamente na nuvem. Basta fazer login em qualquer dispositivo e seus dados estarão lá, sempre atualizados.</div>
+        <div class="faq-q">Posso usar em mais de um computador? <span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">Sim! Sua conta sincroniza automáticamente na nuvem. Basta fazer login em qualquer dispositivo e seus dados estarão la, sempre atualizados.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">Qual a forma de pagamento? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Aceitamos PIX, cartão de crédito e débito. Processamento seguro via Mercado Pago, a plataforma de pagamento mais confiável do Brasil.</div>
+        <div class="faq-q">Qual a forma de pagamento? <span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">Aceitamos PIX, cartão de credito e debito. Processamento seguro via Mercado Pago, a plataforma de pagamento mais confiável do Brasil.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">Tem suporte? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Sim. Suporte via WhatsApp e email. Planos anuais e vitalício têm suporte prioritário. Respondemos em até 24 horas em dias úteis.</div>
+        <div class="faq-q">Tem suporte? <span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">Sim. Suporte via WhatsApp e email. Planos anuais e vitalício tem suporte prioritário. Respondemos em até 24 horas em dias uteis.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q">O que acontece se o pagamento falhar? <span class="faq-chevron">▾</span></div>
-        <div class="faq-a">Se o pagamento falhar, você receberá um email de notificação. Você terá 7 dias para regularizar antes do acesso ser suspenso. Se cancelar, seus dados permanecem salvos localmente.</div>
+        <div class="faq-q">O que acontece se o pagamento falhar? <span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">Se o pagamento falhar, você receberá um email de notificação. Você tera 7 dias para regularizar antes do acesso ser suspenso. Se cancelar, seus dados permanecem salvos localmente.</div>
       </div>
     </div>
   </div>
@@ -524,10 +525,10 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
   <div class="container">
     <div class="cta-box">
       <h2>Pare de perder dinheiro<br><span>por falta de controle.</span></h2>
-      <p>Comece agora a partir de R$9,90/mês. Planos flexíveis, cancele quando quiser.</p>
-      <a href="#preco" class="btn-hero btn-hero-primary" target="_blank" style="display:inline-flex">
+      <p>Comece agora a partir de R$9,90/mes. Planos flexiveis, cancele quando quiser.</p>
+      <a href="#preco" class="btn-hero btn-hero-primary" style="display:inline-flex">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.476 2 2 6.476 2 12c0 1.908.506 3.7 1.387 5.24L2 22l4.895-1.363C8.357 21.517 10.138 22 12 22c5.524 0 10-4.476 10-10S17.523 2 11.999 2zm.001 18.154c-1.696 0-3.296-.47-4.668-1.287l-.334-.197-3.469.967.938-3.588-.216-.349C3.502 14.374 3 13.233 3 12c0-4.963 4.037-9 9-9s9 4.037 9 9-4.037 9-9 9z"/></svg>
-        Ver planos →
+        Ver planos &#8594;
       </a>
     </div>
   </div>
@@ -536,7 +537,7 @@ footer{border-top:1px solid var(--border);padding:32px 5%;display:flex;align-ite
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    Finance<span>OS</span> · Desenvolvido por <span>ogabrieltech</span>
+    Finance<span>OS</span> . Desenvolvido por <span>ogabrieltech</span>
   </div>
   <div class="footer-links">
     <a href="https://ogabrieltech.com.br" target="_blank">ogabrieltech.com.br</a>
